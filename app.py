@@ -44,7 +44,14 @@ model = joblib.load(model_paths[model_name])
 
 uploaded_file = st.file_uploader("Upload Test Dataset (CSV)", type=["csv"])
 
-df = pd.read_csv(uploaded_file)
+columns = [
+    "age", "workclass", "fnlwgt", "education", "education-num",
+    "marital-status", "occupation", "relationship", "race",
+    "sex", "capital-gain", "capital-loss", "hours-per-week",
+    "native-country", "income"
+]
+
+df = pd.read_csv("adult.test", names=columns, sep=",", skiprows=1, skipinitialspace=True)
 
 st.subheader("Dataset Preview")
 st.dataframe(df.head())
