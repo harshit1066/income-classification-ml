@@ -44,6 +44,9 @@ model = joblib.load(model_paths[model_name])
 
 uploaded_file = st.file_uploader("Upload Test Dataset (CSV)", type=["csv"])
 
+if uploaded_file is None:
+    st.info("Upload the test file csv")
+    st.stop()
 
 COLUMN_NAMES = [
     "age", "workclass", "fnlwgt", "education", "education-num",
