@@ -36,4 +36,4 @@ Naive Bayes	: Achieved high AUC (0.82) but low recall (0.31), indicating good pr
 
 Random Forest (Ensemble) : Performance mirrors Naive Bayes due to incorrect prediction usage in code. Once corrected, it is expected to improve recall and MCC by reducing overfitting through ensemble learning.
 
-XGBoost (Ensemble) : Current results are identical to Naive Bayes due to evaluation error. After correction, XGBoost is expected to deliver superior overall performance due to its boosting mechanism and ability to model complex feature interactions.
+XGBoost (Ensemble) : Current results are identical to Naive Bayes due to evaluation error. After correction, XGBoost is expected to deliver superior overall performance due to its boosting mechanism and ability to model complex feature interaction.
